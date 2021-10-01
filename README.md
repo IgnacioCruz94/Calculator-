@@ -1,8 +1,7 @@
 # Closures
 
-**¿What is a closure?**
-A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
-
+**¿What is a closure?**<br>
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).<br>
 In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
 
 A closure is a function having access to the parent scope, even after the parent function has closed.
@@ -25,10 +24,8 @@ function hike(){
     
 }
 
-hike()                  // return a function
-
-hike()()               // 15
-
+hike()                  // return a function <br>
+hike()()               // 15  <br>                                               
 console.log(hike())    // function changekms(){kms=kms*3; console.log(kms)}
 
 **What is ()() in code?**
