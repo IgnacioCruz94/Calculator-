@@ -99,3 +99,8 @@ In closures, the hoisting does not affect, so as I menctioned before in the last
 
 ## **Scope chain, an example of it, how many closures can we nest**
 
+Every closure has three scopes:<br>
+- Local Scope (Own scope)<br>
+- Outer Functions Scope<br>
+- Global Scope
+
