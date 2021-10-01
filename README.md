@@ -104,3 +104,63 @@ Every closure has three scopes:<br>
 - Outer Functions Scope<br>
 - Global Scope
 
+Nested functions have access to the scope "above" them.
+
+function market(){
+
+    let iva=1.16;
+    
+    function products(prod){
+    
+        let costs={tortilla: 15, soda: 20};
+        
+        var item=prod;
+        
+        function findprice(){
+        
+            let prod_availables=Object.entries(costs);
+            
+            switch (item) {
+            
+                case prod_availables[0][0]:
+                
+                    var price = prod_availables[0][1]*iva;
+                    
+                    console.log("El costo con iva de " + item +" es: " +price);
+                    
+                    break;
+                    
+                case prod_availables[1][0]:
+                
+                    var price = prod_availables[1][1]*iva;
+                    
+                    console.log("El costo con iva de"+ item +" es: " +price);
+                    
+                    break;
+                    
+                default:
+                
+                    console.log("This product does not exist, choose another");
+                    
+            }            
+            
+        }
+        
+        return findprice
+        
+    }    
+  
+    return products
+    
+}
+
+market()("soda")() //"El costo con iva desoda es: 23.2"
+
+There is not a number of nested closures that we can use, it depends that you want your code does, we can use nested closures or closures at the same level.
+
+## **They are conflicts between the closure and the global scope?**
+
+## **Advantages of closures**.
+
+- Closures allows us to create modules, they let you define private implementation details (variables, functions) that are hidden from the outside world, as well as a public API that is accessible from the outside.
+- 
