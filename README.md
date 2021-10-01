@@ -25,7 +25,7 @@ function hike(){
 }
 
 hike()                  // return a function <br>
-hike()()               // 15  <br>                                               
+hike()()               // 15 <br>                                               
 console.log(hike())    // function changekms(){kms=kms*3; console.log(kms)}
 
 **What is ()() in code?**
