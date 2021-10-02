@@ -134,7 +134,7 @@ function market(){
                 
                     var price = prod_availables[1][1]*iva;
                     
-                    console.log("El costo con iva de"+ item +" es: " +price);
+                    console.log("El costo con iva de "+ item +" es: " +price);
                     
                     break;
                     
@@ -152,7 +152,7 @@ function market(){
     return products
 }
 
-market()("soda")() //"El costo con iva desoda es: 23.2"
+market()("soda")() //"El costo con iva de soda es: 23.2"
 
 There is not a number of nested closures that we can use, it depends that you want your code does, we can use nested closures or closures at the same level.
 
@@ -161,4 +161,17 @@ There is not a number of nested closures that we can use, it depends that you wa
 ## **Advantages of closures**.
 
 - Closures allows us to create modules, they let you define private implementation details (variables, functions) that are hidden from the outside world, as well as a public API that is accessible from the outside.
-- 
+- Closure enables the use of nested functions that are used to get the values created in the execution context of that of the parent function.
+- They can prove as a perfect solution while solving a problem of hierarchy in any program.
+- The purpose of a closure is to extend the life cycle of a local variable. After the function is executed, the local variable cannot be released by memory, and then the external can access the variable.
+
+## **¿What is data hiding and encapsulation?**
+
+Data hiding is the ability of objects to shield variables from external access. It is a useful consequence of the encapsulation principle.<br>
+JavaScript does not have syntax-level encapsulation. All properties of an object are visible. However, there do exist various patterns to ensure data encapsulation: *Singletons* and the *Module Pattern*.<br>
+The difference between Data Hiding and Data Encapsulation is that Data hiding refers to a process, and Data Encapsulation is a part of a sub-process of that process.
+
+## **What are the disadvantages of closures?**
+
+- Variables used by closure will not be garbage collected.
+- Memory snapshot of the application will be increased if closures are not used properly.
