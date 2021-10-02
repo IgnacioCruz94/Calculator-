@@ -140,8 +140,7 @@ function market(){
                     
                 default:
                 
-                    console.log("This product does not exist, choose another");
-                    
+                    console.log("This product does not exist, choose another");        
             }            
             
         }
@@ -151,7 +150,6 @@ function market(){
     }    
   
     return products
-    
 }
 
 market()("soda")() //"El costo con iva desoda es: 23.2"
