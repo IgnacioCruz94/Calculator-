@@ -171,6 +171,10 @@ Data hiding is the ability of objects to shield variables from external access. 
 JavaScript does not have syntax-level encapsulation. All properties of an object are visible. However, there do exist various patterns to ensure data encapsulation: *Singletons* and the *Module Pattern*.<br>
 The difference between Data Hiding and Data Encapsulation is that Data hiding refers to a process, and Data Encapsulation is a part of a sub-process of that process.
 
+## **Give me an example of privacy with closures**.
+
+
+
 ## **What are the disadvantages of closures?**
 
 - Variables used by closure will not be garbage collected.
