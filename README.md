@@ -94,7 +94,7 @@ function hike(){
 hike()() //15 <br>
 console.log(hike()) //function changekms(){kms=kms*3; console.log(kms)}
 
-In his example we could think that the code will break because of the hoisting but it is not true. <br>
+In this example we could think that the code will break because of the hoisting but it is not true. <br>
 In closures, the hoisting does not affect, so as I menctioned before in the last example, this is possible thank to *lexical enviroment*.
 
 ## **Scope chain, an example of it, how many closures can we nest**
