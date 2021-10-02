@@ -175,6 +175,13 @@ The difference between Data Hiding and Data Encapsulation is that Data hiding re
 
 
 
+## **What happens if you create two counters with the same closure?**
+
+
+## **How can we add more functions as a decrement counter? Give an example of it**.
+
+
+
 ## **What are the disadvantages of closures?**
 
 - Variables used by closure will not be garbage collected.
