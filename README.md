@@ -10,7 +10,7 @@ A closure is a function having access to the parent scope, even after the parent
 
 function hike(){
 
-    let kms=5                //parent scope
+    let kms=5;                //parent scope
     
     function changekms(){    //this is a inner function, a closure
     
