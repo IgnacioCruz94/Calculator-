@@ -158,7 +158,47 @@ There is not a number of nested closures that we can use, it depends that you wa
 
 ## **They are conflicts between the closure and the global scope?**
 
+There is no conflict between the variables, each one corresponds to a different scope, as shown in the example:<br>
 
+#### *Example 1*
+const global_variable="Global scope";
+
+function Ignacio(){
+
+    const global_variable="function scope";
+    
+    function closure(){
+    
+        const global_variable="local scope";
+        
+        console.log(global_variable)
+    }
+    
+    return console.log(global_variable)
+}
+
+Ignacio() //"function scope"
+
+console.log(global_variable) //"Global scope"
+
+#### *Example 2*
+
+const global_variable="Global scope";
+
+function Ignacio(){
+
+    const global_variable="function scope";
+    function closure(){
+        const global_variable="local scope";
+        console.log(global_variable)
+    }
+    
+    return closure
+}
+
+Ignacio()() //"local scope"
+
+console.log(global_variable) //"Global scope"
 
 ## **Advantages of closures**.
 
