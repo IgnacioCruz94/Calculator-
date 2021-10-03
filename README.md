@@ -215,7 +215,23 @@ The difference between Data Hiding and Data Encapsulation is that Data hiding re
 
 ## **Give me an example of privacy with closures**.
 
+function test(){
 
+    var text="try to print me on console ";
+    
+    function print(){
+    
+        console.log(text)
+        
+    }
+    
+    return print
+    
+ }
+ 
+ test()() //"try to print me on console " 
+ 
+ console.log(text) //ReferenceError: text is not defined
 
 ## **What happens if you create two counters with the same closure?**
 
