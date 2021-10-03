@@ -235,29 +235,95 @@ function test(){
 
 ## **What happens if you create two counters with the same closure?**
 
-function start(){
-
-let counter=5;
-
-  function add(){
-  
-     counter++;
-     
-     counter++;
-     
-     return console.log("The counter final counter is: "+counter)
-     
-  }
-  
-  return add
-  
-}
-
-start()()
+Everything will work correctly because both of them have different lexical enviroments.
 
 ## **How can we add more functions as a decrement counter? Give an example of it**.
 
+There are two ways to add more functions, shown in the following examples:
 
+#### **First way to do it**:
+
+function counter() {
+
+  let counter = 0;
+  
+  function plus() {
+  
+    counter++;
+    
+    console.log(counter);
+    
+  }
+  
+  function minus() {
+  
+    counter--;
+    
+    console.log(counter);
+    
+  }
+  
+  return {
+  
+    increment: plus,
+    
+    decrement: minus
+    
+  }
+  
+}
+
+const counters=counter() // we assign the return of the "counter" function to the variable "counters" 
+
+console.log(counters) // { decrement: function minus() { counter--; console.log(counter); }, increment: function plus() { counter++; console.log(counter); } }
+
+counters.decrement() //-1
+
+counters.decrement() //-2
+
+counters.increment() //-1
+
+counters.increment() //0
+
+counters.increment() //1
+
+#### **Second way to do it**:
+
+function counter() {
+
+  let counter = 0;
+  
+  this.plus = () => {
+  
+    counter++;
+    
+    console.log(counter);
+    
+  }
+  
+  this.minus = () => {
+  
+    counter--;
+    
+    console.log(counter);
+    
+  }
+  
+}
+
+const Counter = new counter(); // 
+
+console.log(Counter) //{ minus: () => { counter--; console.log(counter); }, plus: () => { counter++; console.log(counter); } }
+
+Counter.plus(); //11
+
+Counter.plus(); //12
+
+Counter.minus(); //11
+
+Counter.minus(); //10
+
+Counter.minus(); //9
 
 ## **What are the disadvantages of closures?**
 
