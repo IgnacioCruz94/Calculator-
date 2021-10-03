@@ -158,6 +158,8 @@ There is not a number of nested closures that we can use, it depends that you wa
 
 ## **They are conflicts between the closure and the global scope?**
 
+
+
 ## **Advantages of closures**.
 
 - Closures allows us to create modules, they let you define private implementation details (variables, functions) that are hidden from the outside world, as well as a public API that is accessible from the outside.
