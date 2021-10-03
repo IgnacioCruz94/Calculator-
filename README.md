@@ -206,6 +206,7 @@ console.log(global_variable) //"Global scope"
 - Closure enables the use of nested functions that are used to get the values created in the execution context of that of the parent function.
 - They can prove as a perfect solution while solving a problem of hierarchy in any program.
 - The purpose of a closure is to extend the life cycle of a local variable. After the function is executed, the local variable cannot be released by memory, and then the external can access the variable.
+- We can use closures to create another functions.
 
 ## **¿What is data hiding and encapsulation?**
 
@@ -235,7 +236,35 @@ function test(){
 
 ## **What happens if you create two counters with the same closure?**
 
-Everything will work correctly because both of them have different lexical enviroments.
+If I can find an ocassion to do it, I will have a function factory, I need to assign to new variables the the function factory, for example:
+
+function counterBuilder(n){
+
+let counter=100;
+
+   function decrement(){
+   
+     counter=counter-n;
+   
+     console.log(counter)
+   
+   }
+   
+   return decrement
+
+}
+
+const decrementby5=counterBuilder(5); //we assign the function "decrement" to variable "decrementby5"
+
+const decrementby3=counterBuilder(3); //we assign the function "decrement" to variable "decrementby3"
+
+decrementby5() //95
+
+decrementby5() //90
+
+decrementby3() //97
+
+decrementby3() //94
 
 ## **How can we add more functions as a decrement counter? Give an example of it**.
 
