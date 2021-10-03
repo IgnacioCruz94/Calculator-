@@ -235,6 +235,17 @@ function test(){
 
 ## **What happens if you create two counters with the same closure?**
 
+function start(){
+let counter=5;
+  function add(){
+     counter++;
+     counter++;
+     return console.log("The counter final counter is: "+counter)
+  }
+  return add
+}
+
+start()()
 
 ## **How can we add more functions as a decrement counter? Give an example of it**.
 
